@@ -15,14 +15,14 @@ spec:
         track: stable
     spec:
       hostAliases:
-      - ip: "127.0.0.1"
+      - ip: "10.142.0.5"
         hostnames:
         - "orderer0.orderer.com"
-      - ip: "192.168.8.104"
+      - ip: "10.142.0.4"
         hostnames:
         - "couchdb0"
       nodeSelector:
-        id: orderer
+        kubernetes.io/hostname: poc4
       containers:
         - name: orderer0
           image: "hyperledger/fabric-orderer:1.2.0"

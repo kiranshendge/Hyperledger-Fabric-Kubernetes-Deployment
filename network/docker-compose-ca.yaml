@@ -4,7 +4,7 @@ volumes:
   ca.example.com:
 
 networks:
-  new:
+  bridge:
 
 services:
   ca.example.com:
@@ -13,4 +13,4 @@ services:
         service: ca.example.com
       container_name: ca.example.com
       networks:
-        - new
+        - bridge

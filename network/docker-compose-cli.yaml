@@ -26,7 +26,7 @@ services:
     ports:
       - 5984:5984
     networks:
-      - byfn
+      - bridge
 
   orderer0.orderer.com:
     extends:
@@ -34,7 +34,7 @@ services:
       service: orderer0.orderer.com
     container_name: orderer0.orderer.com
     networks:
-      - byfn
+      - bridge
 
   peer0.example.com:
     container_name: peer0.example.com
@@ -42,7 +42,7 @@ services:
       file:  base/docker-compose-base.yaml
       service: peer0.example.com
     networks:
-      - byfn
+      - bridge
 
   peer1.example.com:
     container_name: peer1.example.com
@@ -50,7 +50,7 @@ services:
       file:  base/docker-compose-base.yaml
       service: peer1.example.com
     networks:
-      - byfn
+      - bridge
 
   cli:
     container_name: cli
@@ -83,4 +83,4 @@ services:
       - peer0.example.com
       - peer1.example.com
     networks:
-      - byfn
+      - bridge
