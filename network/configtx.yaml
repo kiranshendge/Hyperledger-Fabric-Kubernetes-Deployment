@@ -66,7 +66,7 @@ Profiles:
           AnchorPeers:
           - Host: peer0.example.com
             Port: 30002
-  mychannel:
+  mychannel1:
     Consortium: Consortium
     Application:
       Organizations:
